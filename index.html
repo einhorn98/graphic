@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Three js Project</title>
+		<link rel="stylesheet" href="app.css">
+	</head>
+	<body onload='setup();'>
+
+		<div id='gameCanvas'></div>
+		<script src='./Scripts/three.min.js'></script>
+		<script src='./Scripts/keyboard.js'></script>
+		<script src='./Scripts/game.js'></script>
+
+		
+		<div class="center">
+			<input type="range" value="2" step="1" min="1" max="3" onchange="changeSpeed()" id="level">
+			<div style="margin-top: 20px;">
+				<div style="text-align: left; display: inline-block; width: 32%;">Easy</div>
+				<div style="text-align: center; display: inline-block; width: 32%;">Normal</div>
+				<div style="text-align: right; display: inline-block; width: 32%;">Hard</div>
+			</div>
+		</div>
+
+		<button id="RefreshButton" class="displayNone" onclick="location.reload();">Refresh Game !</button>
+		<div id='scoreboard'>
+			<h1 id='scores'>0-0</h1>
+			<div class="gameTips">
+				<h2 id='winnerBoard'></h2>
+				<div>
+					Player 1 (blue) : W - Move Top	S - move Bottom
+				</div>
+				<div>
+					Player 2 (red) : 8 - Move Top	5 - move Bottom
+				</div>
+			</div>
+			<ul class="gameCreators">
+				<li><span>Team Head : </span> <span>Erfan sahaf nezhad</span></li>
+				<li><span>Team Memebers : </span> <span>Marzieh omidi , Alireza Ebrahimian</span></li>
+			</ul>
+		</div>
+	</body>
+</html>
